@@ -1,0 +1,42 @@
+package GradeProject;
+
+import java.io.*;
+import java.util.*;
+
+public class TestGradeProject {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		
+		Scanner inFile = new Scanner(new FileReader("Grade.in"));
+		
+		Grade[] all_sgrades = new Grade[6];
+		
+		int index = 0;
+		for(Grade element:all_sgrades) {
+			element = new Grade();
+			element.setStudent_id(inFile.nextInt());
+			element.setStudent_lname(inFile.next());
+			element.setStudent_fname(inFile.next());
+			element.setS_grade_Assignment1(inFile.nextInt());
+			element.setS_grade_Assignment2(inFile.nextInt());
+			element.setS_grade_Assignment3(inFile.nextInt());
+			element.setS_grade_Mid_Term(inFile.nextInt());
+			element.setS_grade_Final_Term(inFile.nextInt());
+			
+			System.out.println("\n"+(index+1)+") s_id: "+element.getStudent_id()+", Student Last Name: "+element.getStudent_lname()+", Student FirstName: "+element.getStudent_fname()
+					+"\n\nAssignment 1 : "+element.getS_grade_Assignment1()
+					+"\nAssignment 2 : "+element.getS_grade_Assignment2()
+					+"\nAssignment 3 : "+element.getS_grade_Assignment3()
+					+"\nMid Term Exam : "+element.getS_grade_Mid_Term()
+					+"\nFinal Exam : "+element.getS_grade_Final_Term()
+					+"\n\nThe Average score for this Student is "+element.Calculate_GradeAverage());
+			
+			index++;
+		}
+
+	}
+	
+	
+
+}

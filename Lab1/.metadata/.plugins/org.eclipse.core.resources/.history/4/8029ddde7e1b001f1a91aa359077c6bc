@@ -1,0 +1,79 @@
+package GradeProject;
+
+import java.io.*;
+import java.util.*;
+
+public class TestGradeProject {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		
+		Scanner inFile = new Scanner(new FileReader("Grade.in"));
+		
+		Grade[] all_sgrades = new Grade[6];
+		int[] all_sId = new int[6];
+		String [] all_sNames = new String[12];
+		double [][] all_sScores = new double [6][5];
+		
+		
+		
+		for(int i = 0; i < all_sgrades.length; i++) {
+			all_sgrades[i] = new Grade();
+			all_sgrades[i].setStudent_id(inFile.nextInt());
+			all_sgrades[i].setStudent_lname(inFile.next());
+			all_sgrades[i].setStudent_fname(inFile.next());
+			all_sgrades[i].setS_grade_Assignment1(inFile.nextInt());
+			all_sgrades[i].setS_grade_Assignment2(inFile.nextInt());
+			all_sgrades[i].setS_grade_Assignment3(inFile.nextInt());
+			all_sgrades[i].setS_grade_Mid_Term(inFile.nextInt());
+			all_sgrades[i].setS_grade_Final_Term(inFile.nextInt());
+			
+			all_sId[i] = all_sgrades[i].getStudent_id();
+			all_sNames[i*2] = all_sgrades[i].getStudent_fname();
+			all_sNames[(i*2)+1] = all_sgrades[i].getStudent_lname();
+			all_sScores[i] = new double [] {all_sgrades[i].getS_grade_Assignment1(),all_sgrades[i].getS_grade_Assignment2(),all_sgrades[i].getS_grade_Assignment3(),all_sgrades[i].getS_grade_Mid_Term(), all_sgrades[i].getS_grade_Final_Term()};
+			
+			System.out.println("\n"+(i+1)+") s_id: "+all_sgrades[i].getStudent_id()+", Student Last Name: "+all_sgrades[i].getStudent_lname()+", Student FirstName: "+all_sgrades[i].getStudent_fname()
+					+"\n\nAssignment 1 : "+all_sgrades[i].getS_grade_Assignment1()
+					+"\nAssignment 2 : "+all_sgrades[i].getS_grade_Assignment2()
+					+"\nAssignment 3 : "+all_sgrades[i].getS_grade_Assignment3()
+					+"\nMid Term Exam : "+all_sgrades[i].getS_grade_Mid_Term()
+					+"\nFinal Exam : "+all_sgrades[i].getS_grade_Final_Term()
+					+"\n\nThe Average score for this Student is "+String.format("%.2f", all_sgrades[i].Calculate_GradeAverage())+"\n\n");
+					
+		}
+		inFile.close();
+		
+		System.out.println("\nAll the students' id:");
+		for(int element:all_sId) {
+			System.out.println("* "+element);
+			
+		}
+		
+		System.out.println("\nAll the students' names:");
+		for(int i = 0; i < (all_sNames.length/2); i++) {
+			System.out.println("* "+all_sNames[i*2]+" "+all_sNames[(i*2)+1]);
+			
+		}
+		
+		int index = 0;
+		System.out.println("\nAll the students' grades:");
+		for(double[] element:all_sScores) {
+			
+			System.out.println("* "+all_sNames[index*2]+" "+all_sNames[(index*2)+1]+":");
+			for(double score:element) {
+				System.out.println("- "+score);
+			}
+			System.out.println("\n");
+			
+			index++;
+			
+		}
+		
+		
+
+	}
+	
+	
+
+}

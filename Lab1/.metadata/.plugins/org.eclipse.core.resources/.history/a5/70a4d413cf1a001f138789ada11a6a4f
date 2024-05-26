@@ -1,0 +1,54 @@
+package FileProcess;
+
+import java.util.*;
+
+public class Divide {
+	private double x;
+	private double y;
+	
+	public Divide() {
+		x = 0;
+		y = 0;
+	}
+	
+	public Divide(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void setX(double x) {
+		this.x = x;
+	}
+	public double getX() {
+		return x;
+	}
+	
+	public void setY(double y) {
+		this.y = y;
+	}
+	public double getY() {
+		return y;
+	}
+	
+	public double division(Divide divide) {
+		return divide.getX()/divide.getY();
+	}
+	
+	public void findX(Divide[] arrayDivide, char response) {
+		
+		if (Character.toLowerCase(response)=='y') {
+			Scanner input = new Scanner(System.in);
+			System.out.println("Please type the double you wanna find");
+			double num = input.nextDouble();
+			for(int i = 0; i<arrayDivide.length; i++) {
+				if(arrayDivide[i].getX()==num) {
+					System.out.println("The number for X= "+num+" exists into the array and it is in the position #"+i);
+					break;
+				}
+			}
+		}
+		
+		}
+	}
+
+

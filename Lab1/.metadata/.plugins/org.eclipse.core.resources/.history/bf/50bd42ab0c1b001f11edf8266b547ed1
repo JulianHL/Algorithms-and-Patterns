@@ -1,0 +1,46 @@
+package GradeProject;
+
+import java.io.*;
+import java.util.*;
+
+public class TestGradeProject {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		
+		Scanner inFile = new Scanner(new FileReader("Grade.in"));
+		
+		Grade[] all_sgrades = new Grade[6];
+		int[] fColumn = new int[6];
+		
+		
+		for(int i = 0; i < all_sgrades.length; i++) {
+			all_sgrades[i] = new Grade();
+			all_sgrades[i].setStudent_id(inFile.nextInt());
+			all_sgrades[i].setStudent_lname(inFile.next());
+			all_sgrades[i].setStudent_fname(inFile.next());
+			all_sgrades[i].setS_grade_Assignment1(inFile.nextInt());
+			all_sgrades[i].setS_grade_Assignment2(inFile.nextInt());
+			all_sgrades[i].setS_grade_Assignment3(inFile.nextInt());
+			all_sgrades[i].setS_grade_Mid_Term(inFile.nextInt());
+			all_sgrades[i].setS_grade_Final_Term(inFile.nextInt());
+			
+			System.out.println("\n"+(i+1)+") s_id: "+all_sgrades[i].getStudent_id()+", Student Last Name: "+all_sgrades[i].getStudent_lname()+", Student FirstName: "+element.getStudent_fname()
+					+"\n\nAssignment 1 : "+all_sgrades[i].getS_grade_Assignment1()
+					+"\nAssignment 2 : "+all_sgrades[i].getS_grade_Assignment2()
+					+"\nAssignment 3 : "+all_sgrades[i].getS_grade_Assignment3()
+					+"\nMid Term Exam : "+all_sgrades[i].getS_grade_Mid_Term()
+					+"\nFinal Exam : "+all_sgrades[i].getS_grade_Final_Term()
+					+"\n\nThe Average score for this Student is "+String.format("%.2f", all_sgrades[i].Calculate_GradeAverage())+"\n\n");
+			
+			fColumn[i] = inFile.nextInt(0);
+			
+			System.out.println("Students"+(i+1)+" Id: " + fColumn[i]);
+					
+		}
+
+	}
+	
+	
+
+}
