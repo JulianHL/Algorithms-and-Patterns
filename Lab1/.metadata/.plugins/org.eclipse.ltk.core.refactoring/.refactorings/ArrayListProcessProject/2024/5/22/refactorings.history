@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;ArrayListProcess.TestsFileArraylIST2&apos; to &apos;TestsFileArrayList2&apos;&#x0D;&#x0A;- Original project: &apos;ArrayListProcessProject&apos;&#x0D;&#x0A;- Original element: &apos;ArrayListProcess.TestsFileArraylIST2&apos;&#x0D;&#x0A;- Renamed element: &apos;ArrayListProcess.TestsFileArrayList2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;TestsFileArraylIST2&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;ArrayListProcess{TestsFileArraylIST2.java[TestsFileArraylIST2" matchStrategy="1" name="TestsFileArrayList2" qualified="false" references="true" similarDeclarations="false" stamp="1716760424867" textual="false" version="1.0"/>
+</session>

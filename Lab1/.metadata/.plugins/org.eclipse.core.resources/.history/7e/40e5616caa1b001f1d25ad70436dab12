@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 
-public class TestsFileArrayList2 {
+public class TestsFileArraylIST2 {
 
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
