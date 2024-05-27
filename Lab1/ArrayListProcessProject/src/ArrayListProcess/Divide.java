@@ -1,6 +1,5 @@
 package ArrayListProcess;
 
-
 import java.util.*;
 
 public class Divide {
@@ -12,11 +11,13 @@ public class Divide {
 		y = 0;
 	}
 	
+	//constructor
 	public Divide(double x, double y) {
 		this.x = x;
 		this.y = y;
 	}
 	
+	//setters and getters
 	public void setX(double x) {
 		this.x = x;
 	}
@@ -31,12 +32,17 @@ public class Divide {
 		return y;
 	}
 	
+	//methods
+	
+	//method for division, it divides the x value by the y value
 	public double division(Divide divide) {
 		return divide.getX()/divide.getY();
 	}
 	
+	//methods for finding an element x in the array
 	public static void findX(List<Divide> arrayListDivide) {
 		
+		// the user is asked to type the number he wants to find, if it is i the array the value of numExist is set to true
 		boolean numExist=false;
 		int index;
 		char response;
@@ -51,19 +57,22 @@ public class Divide {
 			numExist = false;
 		}
 		
-		
-		System.out.println(numExist?"The number for X= "+num+" exists into the list and it is in the position #"+(index+1):"The number you are looking for does not exist");
+		// if the number exists the position is printed and the user is asked if he wants to find another number
+		System.out.println(numExist?"The number for X= "+num+" exists into the array and it is in the position #"+(index+1):"The number you are looking for does not exist");
 		System.out.println("Do you want to find another number? type Y/y to continue or any other key to stop");
 		response = input.next().charAt(0);
 		
+		// if the user wants to find another number the method is called again
 		if (Character.toLowerCase(response)=='y') {
 			findX(arrayListDivide);
 		}
 
 		}
 	
+	//method for finding an element y in the array
 	public static void findY(List<Divide> arrayListDivide) {
 		
+		// the user is asked to type the number he wants to find, if it is i the array the value of numExist is set to true
 		boolean numExist=false;
 		int index;
 		char response;
@@ -78,11 +87,12 @@ public class Divide {
 			numExist = false;
 		}
 		
-		
-		System.out.println(numExist?"The number for Y= "+num+" exists into the list and it is in the position #"+(index+1):"The number you are looking for does not exist");
+		// if the number exists the position is printed and the user is asked if he wants to find another number
+		System.out.println(numExist?"The number for Y= "+num+" exists into the array and it is in the position #"+(index+1):"The number you are looking for does not exist");
 		System.out.println("Do you want to find another number? type Y/y to continue or any other key to stop");
 		response = input.next().charAt(0);
 		
+		// if the user wants to find another number the method is called again
 		if (Character.toLowerCase(response)=='y') {
 			findY(arrayListDivide);
 		}

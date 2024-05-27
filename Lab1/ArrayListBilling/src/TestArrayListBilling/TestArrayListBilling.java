@@ -11,7 +11,7 @@ import java.util.*;
  *
  * @author juldh
  */
-public class ArrayListBilling {
+public class TestArrayListBilling {
 
     /**
      * @param args the command line arguments

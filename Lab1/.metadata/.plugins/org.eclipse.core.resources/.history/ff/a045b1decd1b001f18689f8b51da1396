@@ -1,0 +1,31 @@
+package FileProcess;
+
+import java.io.*;
+import java.util.*;
+
+public class TestFileProcess3 {
+
+	public static void main(String[] args) throws FileNotFoundException {
+		// TODO Auto-generated method stub
+		
+		Scanner inFile = new Scanner(new FileReader("divide.in"));
+		Divide[] arrayInFile = new Divide[4];
+		
+		int index = 0;
+		
+		while (inFile.hasNext()) {
+			arrayInFile[index] = new Divide(inFile.nextDouble(), inFile.nextDouble());
+			index++;
+		}
+		inFile.close();
+		
+		for(Divide element:arrayInFile) {
+			System.out.println("X = "+ element.getX() +" Y = "+ element.getY() +" Division is: "+ element.getX()/element.getY());
+		}
+		
+		Divide.findX(arrayInFile);
+		Divide.findY(arrayInFile);
+
+	}
+
+}

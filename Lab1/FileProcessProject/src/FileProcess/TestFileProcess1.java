@@ -13,10 +13,11 @@ public class TestFileProcess1 {
 		double x, y;
 		
 		while(inFile.hasNext()) {
-			
+			//we load the values of x and y from the file
 			x = (inFile.nextDouble());
 			y = (inFile.nextDouble());
 			
+			//we print the values
 			System.out.println("X = "+x+" Y = "+y+" Division is: "+ x/y);
 			
 		}

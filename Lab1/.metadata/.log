@@ -1580,3 +1580,74 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2024-05-26 21:50:19.074 -----------------------------------------------
+eclipse.buildId=4.31.0.20240307-1200
+java.version=22.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-26 21:50:22.029
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2024-05-26 21:50:30.239
+!MESSAGE Logback config file: C:\Users\juldh\Desktop\Desktop\PROGRAMMING ALGORITHMS AND PATTERNS\Algorithms-and-Patterns\Lab1\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.6.0.20240217-1525.xml
+
+!ENTRY org.eclipse.egit.ui 2 0 2024-05-26 21:50:37.258
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\juldh'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY Codeium 4 0 2024-05-26 21:51:53.097
+!MESSAGE [DefaultDispatcher-worker-5] error in acceptCompletion
+io.grpc.StatusException: UNKNOWN: previous state not found for completion id 69b8fdfb-630b-4c72-adea-08d3589536b9
+	at io.grpc.Status.asException(Status.java:554)
+	at io.grpc.kotlin.ClientCalls$rpcImpl$1$1$1.onClose(ClientCalls.kt:296)
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:563)
+	at io.grpc.internal.ClientCallImpl.access$300(ClientCallImpl.java:70)
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:744)
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:723)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+!STACK 0
+java.lang.Throwable: io.grpc.StatusException: UNKNOWN: previous state not found for completion id 69b8fdfb-630b-4c72-adea-08d3589536b9
+	at io.grpc.Status.asException(Status.java:554)
+	at io.grpc.kotlin.ClientCalls$rpcImpl$1$1$1.onClose(ClientCalls.kt:296)
+	at io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:563)
+	at io.grpc.internal.ClientCallImpl.access$300(ClientCallImpl.java:70)
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:744)
+	at io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:723)
+	at io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37)
+	at io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:133)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1570)
+
+	at com.codeium.eclipse.EclipseLogAppender.append(Unknown Source)
+	at com.codeium.eclipse.EclipseLogAppender.append(Unknown Source)
+	at ch.qos.logback.core.AppenderBase.doAppend(AppenderBase.java:82)
+	at ch.qos.logback.core.spi.AppenderAttachableImpl.appendLoopOnAppenders(AppenderAttachableImpl.java:51)
+	at ch.qos.logback.classic.Logger.appendLoopOnAppenders(Logger.java:270)
+	at ch.qos.logback.classic.Logger.callAppenders(Logger.java:257)
+	at ch.qos.logback.classic.Logger.buildLoggingEventAndAppend(Logger.java:421)
+	at ch.qos.logback.classic.Logger.filterAndLog_0_Or3Plus(Logger.java:383)
+	at ch.qos.logback.classic.Logger.log(Logger.java:765)
+	at io.github.oshai.kotlinlogging.slf4j.internal.LocationAwareKLogger.error(LocationAwareKLogger.kt:368)
+	at io.github.oshai.kotlinlogging.slf4j.internal.LocationAwareKLogger.error(LocationAwareKLogger.kt:466)
+	at com.codeium.eclipse.i.invokeSuspend(Unknown Source)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.internal.ScopeCoroutine.afterResume(Scopes.kt:33)
+	at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:102)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:104)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:571)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:750)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:678)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:665)

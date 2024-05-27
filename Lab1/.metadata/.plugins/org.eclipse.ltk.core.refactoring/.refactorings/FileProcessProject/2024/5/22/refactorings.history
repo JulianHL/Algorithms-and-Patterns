@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Divide.java&apos; to &apos;ArrayListProcessProject/src/ArrayListProcess&apos;&#x0D;&#x0A;- Original project: &apos;FileProcessProject&apos;&#x0D;&#x0A;- Destination element: &apos;ArrayListProcessProject/src/ArrayListProcess&apos;&#x0D;&#x0A;- Original element: &apos;FileProcess.Divide.java&apos;" description="Copy compilation unit" destination="=ArrayListProcessProject/src&lt;ArrayListProcess" element1="/src&lt;FileProcess{Divide.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1716775649131" units="1" version="1.0"/>
+</session>
