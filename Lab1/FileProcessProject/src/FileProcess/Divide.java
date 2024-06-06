@@ -57,7 +57,7 @@ public class Divide {
 			numExist = false;
 		}
 		
-		// if the number exists the index is printed and the user is asked if he wants to find another number
+		// if the number exists the position is printed and the user is asked if he wants to find another number
 		System.out.println(numExist?"The number for X= "+num+" exists into the array and it is in the position #"+(index+1):"The number you are looking for does not exist");
 		System.out.println("Do you want to find another number? type Y/y to continue or any other key to stop");
 		response = input.next().charAt(0);
@@ -87,7 +87,7 @@ public class Divide {
 			numExist = false;
 		}
 		
-		// if the number exists the index is printed and the user is asked if he wants to find another number
+		// if the number exists the position is printed and the user is asked if he wants to find another number
 		System.out.println(numExist?"The number for Y= "+num+" exists into the array and it is in the position #"+(index+1):"The number you are looking for does not exist");
 		System.out.println("Do you want to find another number? type Y/y to continue or any other key to stop");
 		response = input.next().charAt(0);
