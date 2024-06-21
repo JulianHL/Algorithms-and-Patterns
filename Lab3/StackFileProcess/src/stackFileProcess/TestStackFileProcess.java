@@ -18,6 +18,10 @@ public class TestStackFileProcess {
 		
 		stack.print();
 		
+		System.out.println("The size of the stack is: "+stack.stackSize);
+		
+		inFile.close();
+		
 
 	}
 

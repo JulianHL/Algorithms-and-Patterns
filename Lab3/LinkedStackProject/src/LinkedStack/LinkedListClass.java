@@ -16,26 +16,29 @@ public class LinkedListClass {
 		
 		LinkedListNode newNode = new LinkedListNode(info);
 		
-		if(first==null) {
+		switch(first) {
+		case null:
 			first = newNode;
 			last = newNode;
-			
-
-		}
-		else {
-			
+			break;
+		default:
 			last.setLink(newNode);
 			last = last.getLink();
-			
+			break;
 		}
 		size++;
+	}
+	
+	public void push(int info) {
 		
 	}
 	
 	public void print() {
+
+		System.out.println("Linked List Values: ");
 		LinkedListNode current = first;
 		while(current!=null) {
-			System.out.println(current.getInfo());
+			System.out.println("Value: " + current.getInfo());
 			current = current.getLink();
 		}
 	}

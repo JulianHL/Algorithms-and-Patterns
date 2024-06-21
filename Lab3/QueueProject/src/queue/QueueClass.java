@@ -63,6 +63,7 @@ public class QueueClass {
 	}
 	
 	public int deleteQueue() {
+		
 		int value =queue[front]; 
 		queue[front] = null;
 		front = (front+1)%size;

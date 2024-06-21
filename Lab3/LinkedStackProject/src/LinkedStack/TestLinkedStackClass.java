@@ -1,6 +1,6 @@
 package LinkedStack;
 
-public class TestLinkedListClass {
+public class TestLinkedStackClass {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,23 +10,18 @@ public class TestLinkedListClass {
 		
 		//Linked List
 		myList.add(10);
-		myList.add(11);
-		myList.add(31);
-		myList.add(4);
-		myList.add(100);
-		myList.add(70);
-		myList.add(48);
+		myList.add(15);
+		myList.add(20);
+		myList.add(25);
+		
 		
 		myList.print();
-		myList.search(80);
 		
-		myStack.push(10);
-		myStack.push(11);
-		myStack.push(31);
-		myStack.push(4);
-		myStack.push(100);
+		
+		myStack.push(40);
+		myStack.push(50);
+		myStack.push(60);
 		myStack.push(70);
-		myStack.push(48);
 		
 		myStack.print();
 		

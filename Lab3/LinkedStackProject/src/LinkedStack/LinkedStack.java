@@ -8,7 +8,7 @@ public class LinkedStack {
 	public void push(int info) {
 		
 		LinkedListNode newNode = new LinkedListNode(info);
-		newNode.setLink(stackTop);
+		newNode.setLink(stackTop); 
 		stackTop = newNode;
 		}
 	
@@ -26,9 +26,10 @@ public class LinkedStack {
 	
 	public void print() {
 	
+		System.out.println("Stack Values: ");
 		LinkedListNode current = stackTop;
 		while(current != null) {
-			System.out.println(current.getInfo());
+			System.out.println("Value: " + current.getInfo());
 			current = current.getLink();
 		}
 	}
