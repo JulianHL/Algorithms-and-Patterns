@@ -27,6 +27,13 @@ public class Point <T> {
 		this.y = y;
 	}
 	
+	
+	
+	@Override
+	public String toString() {
+		return "Point [x=" + x + ", y=" + y + "]";
+	}
+
 	public <T> void printArray(T[] v_array) {
 		
 		for(T element : v_array) {
@@ -36,7 +43,7 @@ public class Point <T> {
 		System.out.println();
 	}
 	
-public <T> void printArray2(T ... v_array ) {
+	public <T> void printArray2(T ... v_array ) {
 		
 		for( T element : v_array) {
 				
@@ -45,6 +52,7 @@ public <T> void printArray2(T ... v_array ) {
 			
 		System.out.println();
 	}
+	
 	
 
 }

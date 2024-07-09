@@ -24,28 +24,32 @@ public class TestLinkedListCollection {
 		//print using iterator class
 		
 		String strElement;
-		System.out.println("\nPrint LinkedList using iterator class forward");
+		System.out.println("\nPrint LinkedList using iterator");
 		ListIterator<String> it = nameList.listIterator();
 		while(it.hasNext()) {
 			strElement = it.next();
 			System.out.println(strElement);
 			if(strElement.equals("Bob")) {
 				it.set("Lee");
-				}
-			
+				}	
 		}
 		
-		System.out.println("\nPrint LinkedList using iterator class backward");
+		System.out.println("\nafter changing Traversing LinkedList in forward direction");
+		while(it.hasPrevious()) {
+			strElement = it.previous();
+		}
+		while(it.hasNext()) {
+			strElement = it.next();
+			System.out.println(strElement);
+		}
+		
+		System.out.println("\nDisplaying elements of LinkedList using in backward (Reverse)");
 		while(it.hasPrevious()) {
 			strElement = it.previous();
 			System.out.println(strElement);
 		}
 		
-		System.out.println("\nPrint LinkedList using iterator class fordward again");
-		while(it.hasNext()) {
-			strElement = it.next();
-			System.out.println(strElement);
-		}
+
 		
 	}
 

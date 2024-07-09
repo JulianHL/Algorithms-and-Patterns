@@ -23,26 +23,26 @@ public class CarHashTest {
 		carHashMap.put(car4.getVin(), car4);
 		
 		// Displaying hashmap
-		System.out.println("Search by VIN");
+		System.out.println("Search by VIN of car:");
 		Car foundCar = carHashMap.get(car1.getVin());
 		
 		if(foundCar != null)
 		{
-			System.out.println("Car found: " + foundCar.toString());
+			System.out.println("Car found: \n" + foundCar.toString());
 		}
 		else
 		{
 			System.out.println("Car not found");
 		}
 		
-		System.out.println("Display all Keys");
+		System.out.println("\nDisplay all Keys:");
 		
 		Set<String> keys = carHashMap.keySet();
 		for(String element: keys) {
 			System.out.println(element);
 		}
 		
-		System.out.println("Display all values of Map collection");
+		System.out.println("\nDisplay all values of Map collection:");
 		
 		Collection <Car> carValues = carHashMap.values();
 		for(Car element: carValues) {

@@ -26,7 +26,7 @@ public class TestHashSetCollection {
 		mySet2.add("Strawberry");
 		mySet2.add("Banana");
 		
-		System.out.println("\nPrint mySet Elements in ascending order of LinkedHashSet");
+		System.out.println("\nPrint mySet Elements in order of LinkedHashSet");
 		for(String element : mySet2) {
 			System.out.println(element);
 		}
