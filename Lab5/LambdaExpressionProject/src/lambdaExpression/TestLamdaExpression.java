@@ -7,23 +7,24 @@ public class TestLamdaExpression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Set<String> myFruitSet = new HashSet<>();
+		List<Integer> numbers = new ArrayList<>();
 		
-		myFruitSet.add("pear");
-		myFruitSet.add("apple");
-		myFruitSet.add("strawberry");
-		myFruitSet.add("banana");
+		numbers.add(5);
+		numbers.add(9);
+		numbers.add(8);
+		numbers.add(1);
 
+		System.out.println("Printing array using Enhanced For Loop");
 		
-		myFruitSet.forEach((fruit)->System.out.println(fruit));
-		
-		for(String fruit : myFruitSet) {
-			System.out.println(fruit);
+		for(int number : numbers) {
+			System.out.println(number);
 		}
 		
-		myFruitSet.forEach((fruit)->System.out.println(fruit));
+		System.out.println("\nPrinting array using Lambda Expression");
+		numbers.forEach((fruit)->System.out.println(fruit));
 		
-		myFruitSet.forEach(System.out::println);
+		System.out.println("\nPrinting array using method reference");
+		numbers.forEach(System.out::println);
 		
 	}
 

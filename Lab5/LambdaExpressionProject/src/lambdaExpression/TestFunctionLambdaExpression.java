@@ -9,7 +9,7 @@ public class TestFunctionLambdaExpression {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//Half references mrthod that returns double
+		System.out.println("Using Function Interface and Lambda Expression: ");
 		Function<Integer,Double> half = (n) -> n*0.5;
 		
 		double ans = half.apply(10);
@@ -29,13 +29,16 @@ public class TestFunctionLambdaExpression {
 		numberlist.add(-9);
 		numberlist.add(3);
 		
+		
+		
 		Consumer<Integer> useHalf = (n) -> System.out.println(n*0.5);
 		System.out.println("\nHalf Using Function into ForEach:");
 		numberlist.forEach(useHalf);
 		
-		Consumer<Integer> useHalf2 = useHalf.andThen((n) -> System.out.println(n*3));
+		Function<Integer,Double> useHalfFunction = (n) -> n*0.5;
+		Function<Integer,Double> useHalf2 = useHalfFunction.andThen((n) -> n*3);
 		System.out.println("\nHalf Using Function into ForEach:");
-		numberlist.forEach(useHalf2); 
+		numberlist.forEach(n -> System.out.println(useHalf2.apply(n))); 
 		
 		
 		
